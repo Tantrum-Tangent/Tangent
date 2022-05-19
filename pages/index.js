@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -47,6 +48,9 @@ export default function Home() {
             />
           </label>
         </div>
+        <Link href="./dashboard">
+          <a>Back to Dashboard</a>
+        </Link>
       </main>
 
       <footer className={styles.footer}>Powered by Tantrum</footer>
