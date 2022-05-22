@@ -18,7 +18,7 @@ export default function Dashboard(props) {
         {receiptsData.map((receipt) => (
           <div key={receipt.id}>
             <Link href={`receipts/${receipt.id}`}>
-              <a>{receipt.company}</a>
+              <a>{receipt.name}</a>
             </Link>
           </div>
         ))}
@@ -28,10 +28,10 @@ export default function Dashboard(props) {
 }
 
 export const getStaticProps = async () => {
-  const q = query(collection(db, "receipts"), orderBy('totalamt', 'desc'));
+  const q = query(collection(db, "receipts"), orderByChild('totalamt', 'desc'));
   const receipts = await getDocs(q);
   const receiptsData = receipts.docs.map((receipt) => {
-    
+    console.log(receipt)
     return ({
     id: receipt.id,
     ...receipt.data(),

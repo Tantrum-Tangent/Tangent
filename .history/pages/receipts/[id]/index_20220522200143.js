@@ -6,14 +6,13 @@ import { db } from "../../../firebase.config";
 import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 
 export default function Receipt(props) {
-  const { receiptData } = props
   return (
     <div >
       <Head>
         <title>Tangent</title>
       </Head>
       <main>
-        <h1>{receiptData.company}</h1>
+        <h1>Receipt</h1>
         <Link href="../dashboard">
           <a>Back to Dashboard</a>
         </Link>

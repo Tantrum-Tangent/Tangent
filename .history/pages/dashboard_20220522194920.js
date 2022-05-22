@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useEffect } from "react";
 import { db } from "../firebase.config";
-import { query, collection, getDocs, orderBy } from "firebase/firestore";
+import { query, collection, getDocs, orderByChild } from "firebase/firestore";
 
 export default function Dashboard(props) {
   const { receiptsData } = props;
@@ -18,7 +18,7 @@ export default function Dashboard(props) {
         {receiptsData.map((receipt) => (
           <div key={receipt.id}>
             <Link href={`receipts/${receipt.id}`}>
-              <a>{receipt.company}</a>
+              <a>{receipt.name}</a>
             </Link>
           </div>
         ))}
@@ -28,14 +28,12 @@ export default function Dashboard(props) {
 }
 
 export const getStaticProps = async () => {
-  const q = query(collection(db, "receipts"), orderBy('totalamt', 'desc'));
+  const q = query(collection(db, "receipts"));
   const receipts = await getDocs(q);
-  const receiptsData = receipts.docs.map((receipt) => {
-    
-    return ({
+  const receiptsData = receipts.docs.map((receipt) => ({
     id: receipt.id,
     ...receipt.data(),
-  })});
+  }));
   console.log(receiptsData)
   return {
     props: {

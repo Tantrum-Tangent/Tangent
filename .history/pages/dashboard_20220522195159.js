@@ -18,7 +18,7 @@ export default function Dashboard(props) {
         {receiptsData.map((receipt) => (
           <div key={receipt.id}>
             <Link href={`receipts/${receipt.id}`}>
-              <a>{receipt.company}</a>
+              <a>{receipt.name}</a>
             </Link>
           </div>
         ))}

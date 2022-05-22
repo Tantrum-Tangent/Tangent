@@ -13,7 +13,7 @@ export default function Receipt(props) {
         <title>Tangent</title>
       </Head>
       <main>
-        <h1>{receiptData.company}</h1>
+        <h1>Receipt</h1>
         <Link href="../dashboard">
           <a>Back to Dashboard</a>
         </Link>
