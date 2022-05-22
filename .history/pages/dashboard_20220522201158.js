@@ -15,14 +15,14 @@ export default function Dashboard(props) {
       <Header />
       <main className={styles.main}>
         <h1>Dashboard</h1>
-
+        
         <div className={styles.listOfUploads}>
           {receiptsData.map((receipt) => (
-            <Link href={`receipts/${receipt.id}`}>
-              <div key={receipt.id}>
+            <div key={receipt.id}>
+              <Link href={`receipts/${receipt.id}`}>
                 <a>{receipt.company}</a>
-              </div>
-            </Link>
+              </Link>
+            </div>
           ))}
 
           <div>upload 1</div>

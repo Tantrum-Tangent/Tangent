@@ -1,10 +1,13 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+<<<<<<< HEAD
 import styles from "../../../styles/Home.module.css";
 import { db } from "../../../firebase.config";
 import { collection, doc, getDoc, getDocs } from "firebase/firestore";
+=======
 import styles from "../../styles/Home.module.css";
+>>>>>>> upstream/main
 
 export default function Receipt(props) {
   const { receiptData } = props

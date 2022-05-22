@@ -4,7 +4,6 @@ import Link from "next/link";
 import styles from "../../../styles/Home.module.css";
 import { db } from "../../../firebase.config";
 import { collection, doc, getDoc, getDocs } from "firebase/firestore";
-import styles from "../../styles/Home.module.css";
 
 export default function Receipt(props) {
   const { receiptData } = props
