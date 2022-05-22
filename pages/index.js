@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { useState } from "react";
 import Link from "next/link";
+import Header from "../components/header";
 
 export default function Home() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -13,10 +14,8 @@ export default function Home() {
       <Head>
         <title>Tangent</title>
       </Head>
-
+      <Header />
       <main className={styles.main}>
-        <h1 className={styles.title}>Tangent</h1>
-
         <p className={styles.description}>
           Upload a receipt/bank statment etc and let us extract the important
           information out for you!

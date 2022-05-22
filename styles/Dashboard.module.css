@@ -1,0 +1,17 @@
+.main {
+}
+
+.listOfUploads {
+  background-color: aliceblue;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 2vw;
+  padding: 2vw;
+}
+
+.listOfUploads > div {
+  border: 1px solid black;
+  height: 15vw;
+  width: 15vw;
+  text-align: center;
+}
