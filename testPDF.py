@@ -20,6 +20,7 @@ gcs_source_uri = 'gs://tantrum-44f6b.appspot.com/receipts/Invoice Sample.pdf'
 gcs_source = vision.types.GcsSource(uri=gcs_source_uri)
 input_config = vision.types.InputConfig(gcs_source=gcs_source, mime_type=mime_type)
 
+#Push to database = firestore
 gcs_destination_uri = 'gs://tantrum-44f6b.appspot.com/receipts/pdf_result'
 gcs_destination = vision.types.GcsDestination(uri=gcs_destination_uri)
 output_config = vision.types.OutputConfig(gcs_destination=gcs_destination, batch_size=batch_size)
