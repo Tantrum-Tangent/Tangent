@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
 
 export default function Form(props) {
   return (
-    <div>form
-        <p>{props?.url}</p>
+    <div>
+      form
+      <p>{props?.url}</p>
     </div>
-  )
+  );
 }
