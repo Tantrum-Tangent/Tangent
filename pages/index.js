@@ -6,6 +6,7 @@ import Link from "next/link";
 import Header from "../components/header";
 import { Document, Page, pdfjs } from "react-pdf";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import Form from "../components/form";
 
 export default function Home() {
   // Initialize local state
@@ -117,7 +118,7 @@ export default function Home() {
                 className={styles.uploadButtonInput}
                 id="inputTag"
                 type="file"
-                accept="image/*,.pdf"
+                accept=".pdf"
                 onChange={(event) => {
                   console.log(event.target.files[0]);
                   if (
