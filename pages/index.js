@@ -6,6 +6,7 @@ import Link from "next/link";
 import Header from "../components/header";
 import { Document, Page, pdfjs } from "react-pdf";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import Form from "../components/form";
 
 export default function Home() {
   // Initialize local state
