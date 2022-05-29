@@ -72,7 +72,7 @@ export default function Home() {
         </p>
 
         {url ? (
-          <Form url={url}/>
+          <Form url={url} />
         ) : (
           <div className={styles.uploadArea}>
             {selectedImage == null ? (
@@ -117,7 +117,7 @@ export default function Home() {
                 className={styles.uploadButtonInput}
                 id="inputTag"
                 type="file"
-                accept="image/*,.pdf"
+                accept=".pdf"
                 onChange={(event) => {
                   console.log(event.target.files[0]);
                   if (

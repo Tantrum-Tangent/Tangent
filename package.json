@@ -9,13 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@google-cloud/vision": "^2.4.2",
     "firebase": "^9.8.1",
+    "fs": "^0.0.1-security",
     "moment": "^2.29.3",
     "next": "^12.1.6",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-firebase-hooks": "^5.0.3",
-    "react-firebaseui": "^6.0.0"
+    "react-firebaseui": "^6.0.0",
+    "react-pdf": "^5.7.2"
   },
   "devDependencies": {
     "eslint": "8.15.0",
