@@ -73,7 +73,7 @@ export default function Home() {
         </p>
 
         {url ? (
-          <Form url={url}/>
+          <Form url={url} />
         ) : (
           <div className={styles.uploadArea}>
             {selectedImage == null ? (
