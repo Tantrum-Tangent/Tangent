@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 1rem 17rem;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title {
+  text-align: center;
+}
+
+.link {
+  font-size: 1rem;
+  margin-top: 2vw;
+}
